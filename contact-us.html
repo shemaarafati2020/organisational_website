@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact-us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+            <h1>Tech Innovators Inc.</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button>🔍</button>
+        </div>
+        <label class="toggle-switch" for="modeToggle"> 
+            <input type="checkbox" id="modeToggle" title="Toggle Mode">
+            <span class="slider"></span>
+          </label>
+    </header>
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="features.html">Features</a></li>
+           <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="app-development.html">App Development</a></li>
+                    <li><a href="cloud-services.html">Cloud Services</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">training</a>
+                <ul class="dropdown-content">
+                    <li><a href="html-cohort.html">html cohort</a></li>
+                    <li><a href="database-trainning.html">database-trainning</a></li>
+                    <li><a href="css-training.html">css training</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="contact-form" id="space">
+            <h1>CONTACT US</h1>
+            <form>
+                <label for="name">Names:</label>
+                <input type="text" name="name" id="name" placeholder="Enter names" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" required>
+                
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        
+        <section class="map">
+            <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.555555555555!2d29.34778!3d-2.06028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d9b1f1f1f1f1f1%3A0x1f1f1f1f1f1f1f1f!2sKibuye%2C%20Rwanda!5e0!3m2!1sen!2srw!4v1610000000000!5m2!1sen!2srw"
+    width="500"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+        </section>
+        <aside class="announcements" id="space">
+            <h3>ANNOUNCEMENTS</h3>
+            <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" onmouseover="this.stop();" onmouseout="this.start();">
+                <h2>Scheduled Server Maintenance</h2>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>IT Tech Announcements</title>
+                </head>
+                <body>
+                   
+                    <p>In the ever-evolving world of information technology, staying informed about updates, security measures, and new developments is essential for a secure digital environment.</p>
+                    
+                    <p>Scheduled server maintenance will occur on [Date] from [Time] to [Time]. Some services may be unavailable, so please save work and report urgent issues beforehand.</p>
+                    
+                    <p>Beware of phishing emails attempting to steal credentials. Avoid clicking suspicious links, verify senders, and report any suspicious emails to [Security Team Email].</p>
+                    
+                    <p>We are launching [Software Name] on [Date] to improve productivity and security. Training is available. Contact IT support for assistance with any issues.</p>
+                    
+                    <p>New password policy starts [Date]. Use at least 12 characters, including uppercase, numbers, and symbols. Avoid reusing old passwords for security enhancement.</p>
+                    
+                    <p>Staying updated ensures a secure and efficient work environment. Contact IT support with any questions. Thank you for prioritizing security and efficiency.</p>
+                </body>
+                </html>
+                
+                
+            </marquee>
+        </aside>
+    </main>
+  
+    <footer>
+        <p>© 2025 Tech Innovators Inc.</p>
+        <a href="#">Privacy Policy</a> <br> <a href="#">Terms and Conditions</a>
+        <div class="social-links">
+            <a href="#"><img src="youtube.png" alt="YouTube" width="20"></a>
+            <a href="#"><img src="x.png" alt="X" width="20"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn" width="20"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram" width="20"></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.getElementById('body');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+            <h1>Tech Innovators Inc.</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button>🔍</button>
+        </div>
+        <label class="toggle-switch" for="modeToggle"> 
+            <input type="checkbox" id="modeToggle" title="Toggle Mode">
+            <span class="slider"></span>
+          </label>
+    </header>
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="app-development.html">App Development</a></li>
+                    <li><a href="cloud-services.html">Cloud Services</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">training</a>
+                <ul class="dropdown-content">
+                    <li><a href="html-cohort.html">html cohort</a></li>
+                    <li><a href="database-trainning.html">database-trainning</a></li>
+                    <li><a href="css-training.html">css training</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="registration-form">
+            <h1>Registration Form</h1>
+            <div class="container">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <label for="full_name">Full Name:</label>
+                        <input type="text" id="full_name" name="full_name" required placeholder="Enter your full name">
+                        
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                        
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" pattern="^\+?[0-9]{1,4}?[-.\s]?[0-9]{1,15}$">
+                        
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" required placeholder="Enter your address" rows="4"></textarea>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Account Information</legend>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required placeholder="Choose a username">
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                        
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        <label for="newsletter">Newsletter Subscription:</label>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Yes, I want to receive newsletters.</label>
+                        
+                        <label for="communication_method">Preferred Communication Method:</label>
+                        <select id="communication_method" name="communication_method" required>
+                            <option value="Email">Email</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Both">Both</option>
+                        </select>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        <label for="profile_picture">Profile Picture:</label>
+                        <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                        
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio" placeholder="Write a brief bio about yourself" rows="4"></textarea>
+                    </fieldset>
+                    
+                    <div class="button-group">
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>           
+        </section>
+
+        <aside class="announcements" id="space">
+            <h3>ANNOUNCEMENTS</h3>
+            <marquee behavior="scroll" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">
+                <h2>Scheduled Server Maintenance</h2>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>IT Tech Announcements</title>
+                </head>
+                <body>
+                    
+                    <p>In the ever-evolving world of information technology, staying informed about updates, security measures, and new developments is essential for a secure digital environment.</p>
+                    
+                    <p>Scheduled server maintenance will occur on [Date] from [Time] to [Time]. Some services may be unavailable, so please save work and report urgent issues beforehand.</p>
+                    
+                    <p>Beware of phishing emails attempting to steal credentials. Avoid clicking suspicious links, verify senders, and report any suspicious emails to [Security Team Email].</p>
+                    
+                    <p>We are launching [Software Name] on [Date] to improve productivity and security. Training is available. Contact IT support for assistance with any issues.</p>
+                    
+                    <p>New password policy starts [Date]. Use at least 12 characters, including uppercase, numbers, and symbols. Avoid reusing old passwords for security enhancement.</p>
+                    
+                    <p>Staying updated ensures a secure and efficient work environment. Contact IT support with any questions. Thank you for prioritizing security and efficiency.</p>
+                </body>
+                </html>
+                
+                
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2025 Tech Innovators Inc.</p>
+        <a href="#">Privacy Policy</a> <br> <a href="#">Terms and Conditions</a>
+        <div class="social-links">
+            <a href="#"><img src="youtube.png" alt="YouTube" width="20"></a>
+            <a href="#"><img src="x.png" alt="X" width="20"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn" width="20"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram" width="20"></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.getElementById('body');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

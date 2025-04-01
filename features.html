@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>features</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #features{
+            text-align: left;
+            margin-top: 3cm;
+        }
+        #task{
+            width: 30%;
+        }
+        .canvas-container{
+            border: solid 1px;
+            width: 60%;
+            height: auto;
+        }
+        @media screen and (max-width: 600px) {
+            #features {
+                margin-top: 3.5cm;
+            }
+           
+            
+        }
+    </style>
+</head>
+<body id="body">
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+            <h1>Tech Innovators Inc.</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button>🔍</button>
+        </div>
+        <label class="toggle-switch" for="modeToggle"> 
+            <input type="checkbox" id="modeToggle" title="Toggle Mode">
+            <span class="slider"></span>
+          </label>
+    </header>
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="app-development.html">App Development</a></li>
+                    <li><a href="cloud-services.html">Cloud Services</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">training</a>
+                <ul class="dropdown-content">
+                    <li><a href="html-cohort.html">html cohort</a></li>
+                    <li><a href="database-trainning.html">database-trainning</a></li>
+                    <li><a href="css-training.html">css training</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="features">
+            <article class="features">
+                <h2 class="features">Geolocation API</h2>
+                <p>Click the button to get your current location:</p>
+                <input type="submit" onclick="getLocation()" value="Get Location">
+                <p id="location"></p>
+            </article>
+            <article>
+                <h2>Web Storage API</h2>
+                <p>To-Do List:</p>
+                <input type="text" id="task" placeholder="New task"><br>
+                <input type="submit" onclick="addTask()" value="Add Task">
+                <ul id="taskList"></ul>
+            </article>
+            <article>
+                <h2>Fetch API</h2>
+                <p>Click the button to fetch data from a public API:</p>
+                <input type="submit" onclick="fetchData()" value="Fetch Data">
+                <pre id="apiData"></pre>
+            </article>
+            <article>
+                <h2>Canvas API</h2>
+                <p>Draw on the canvas below:</p>
+                <div class="canvas-container">
+                    <canvas id="canvas" width="500" height="500"></canvas>
+                </div>
+                <br>
+                <input type="reset" onclick="clearCanvas()" value="Clear Canvas">
+            </article>
+        </section>
+        <aside class="announcements">
+            <h3>ANNOUNCEMENTS</h3>
+            <marquee behavior="scroll" direction="up" scrollamount="1" loop="-1" height="200" scrolldelay="-1" onmouseover="this.stop();" onmouseout="this.start();">
+                <h2>Scheduled Server Maintenance</h2>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>IT Tech Announcements</title>
+                </head>
+                <body>
+                    
+                    <p>In the ever-evolving world of information technology, staying informed about updates, security measures, and new developments is essential for a secure digital environment.</p>
+                    
+                    <p>Scheduled server maintenance will occur on [Date] from [Time] to [Time]. Some services may be unavailable, so please save work and report urgent issues beforehand.</p>
+                    
+                    <p>Beware of phishing emails attempting to steal credentials. Avoid clicking suspicious links, verify senders, and report any suspicious emails to [Security Team Email].</p>
+                    
+                    <p>We are launching [Software Name] on [Date] to improve productivity and security. Training is available. Contact IT support for assistance with any issues.</p>
+                    
+                    <p>New password policy starts [Date]. Use at least 12 characters, including uppercase, numbers, and symbols. Avoid reusing old passwords for security enhancement.</p>
+                    
+                    <p>Staying updated ensures a secure and efficient work environment. Contact IT support with any questions. Thank you for prioritizing security and efficiency.</p>
+                </body>
+                </html>
+                
+                
+            </marquee>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2025 Tech Innovators Inc.</p>
+        <a href="#">Privacy Policy</a> <br> <a href="#">Terms and Conditions</a>
+        <div class="social-links">
+            <a href="#"><img src="youtube.png" alt="YouTube" width="20"></a>
+            <a href="#"><img src="x.png" alt="X" width="20"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn" width="20"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook" width="20"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram" width="20"></a>
+        </div>
+    </footer>
+    <script>
+        // Geolocation API
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const equatorPosition = latitude > 0 ? "North of the Equator" : latitude < 0 ? "South of the Equator" : "On the Equator";
+            const meridianPosition = longitude > 0 ? "East of the Prime Meridian" : longitude < 0 ? "West of the Prime Meridian" : "On the Prime Meridian";
+
+            document.getElementById("location").innerHTML = `
+                Latitude: ${latitude} (${equatorPosition})<br>
+                Longitude: ${longitude} (${meridianPosition})
+            `;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("location").innerHTML = "An unknown error occurred.";
+                    break;
+            }
+        }
+
+        // Web Storage API
+        function addTask() {
+            let task = document.getElementById("task").value;
+            if (task) {
+                let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                tasks.push(task);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                displayTasks();
+                document.getElementById("task").value = "";
+            }
+        }
+
+        function displayTasks() {
+            let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+            let taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            tasks.forEach((task) => {
+                let li = document.createElement("li");
+                li.textContent = task;
+                taskList.appendChild(li);
+            });
+        }
+
+        window.onload = displayTasks;
+
+        // Fetch API
+        function fetchData() {
+            fetch('https://jsonplaceholder.typicode.com/posts/1')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("apiData").innerHTML = `
+                        <strong>Title:</strong> ${data.title}<br>
+                        <strong>Body:</strong> ${data.body}
+                    `;
+                })
+                .catch(error => {
+                    document.getElementById("apiData").innerHTML = "Error fetching data.";
+                    console.error("Error:", error);
+                });
+        }
+
+        // Canvas API
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        let drawing = false;
+
+        canvas.addEventListener("mousedown", (e) => {
+            drawing = true;
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+        });
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (drawing) {
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            }
+        });
+
+        canvas.addEventListener("mouseup", () => {
+            drawing = false;
+            ctx.closePath();
+        });
+
+        canvas.addEventListener("mouseleave", () => {
+            drawing = false;
+            ctx.closePath();
+        });
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        }
+    </script>
+</body>
+</html>
